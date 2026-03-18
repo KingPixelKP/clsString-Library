@@ -385,7 +385,7 @@ public:
 	{
 		for (short i = 0; i < Value.length(); i++)
 		{
-			if (Value[i] != ' ')
+			if (isspace(Value[i]) == 0)
 			{
 				return Value.substr(i, Value.length() - i);
 			}
@@ -403,7 +403,7 @@ public:
 	{
 		for (short i = Value.length() - 1; i >= 0; i--)
 		{
-			if (Value[i] != ' ')
+			if (isspace(Value[i]) == 0)
 			{
 				return Value.substr(0, i + 1);
 			}
